@@ -1,14 +1,21 @@
 {
-    "name": "Star Realms Authority Tracker",
-    "short_name": "Star Realms Authority Tracker",
-    "icons": [
-        {
-            "src": "/android-chrome-96x96.png",
-            "sizes": "96x96",
-            "type": "image/png"
-        }
-    ],
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
-    "display": "standalone"
+  "name": "Star Realms Authority Tracker",
+  "short_name": "Star Realms Authority Tracker",
+  "description": "An unofficial Star Realms authority tracker",
+  "start_url": "/?source=pwa",
+  "icons": [
+    {
+      "src": "./assets/favicon/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./assets/favicon/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone"
 }
