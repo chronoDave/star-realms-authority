@@ -1,8 +1,9 @@
 {
   "name": "Star Realms Authority Tracker",
   "short_name": "SRAT",
+  "id": "/star-realms-authority/",
   "description": "An unofficial Star Realms authority tracker",
-  "start_url": "./",
+  "start_url": "/star-realms-authority/",
   "icons": [
     {
       "src": "./android-chrome-192x192.png",
