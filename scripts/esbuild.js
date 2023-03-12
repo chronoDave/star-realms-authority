@@ -1,7 +1,10 @@
 import esbuild from 'esbuild';
 
 const config = {
-  entryPoints: ['src/index.ts'],
+  entryPoints: [
+    'src/index.ts',
+    'src/service.ts'
+  ],
   bundle: true,
   minify: true,
   sourcemap: true,

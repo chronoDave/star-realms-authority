@@ -37,3 +37,12 @@ Array.from(document.querySelectorAll('.player'))
   });
 
 update();
+
+/** Service Worker */
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker
+      .register('./service.js')
+      .catch(console.error);
+  });
+}

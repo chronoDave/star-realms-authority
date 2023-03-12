@@ -1,21 +1,21 @@
 {
   "name": "Star Realms Authority Tracker",
-  "short_name": "Star Realms Authority Tracker",
+  "short_name": "SRAT",
   "description": "An unofficial Star Realms authority tracker",
-  "start_url": "/?source=pwa",
+  "start_url": "./",
   "icons": [
     {
-      "src": "./assets/favicon/android-chrome-192x192.png",
+      "src": "./android-chrome-192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "./assets/favicon/android-chrome-512x512.png",
+      "src": "./android-chrome-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
   ],
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
+  "theme_color": "#00aba9",
+  "background_color": "#00aba9",
   "display": "standalone"
 }
