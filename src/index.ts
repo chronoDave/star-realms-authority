@@ -42,7 +42,7 @@ update();
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker
-      .register('./service.js')
+      .register('/star-realms-authority/service.js')
       .catch(console.error);
   });
 }
