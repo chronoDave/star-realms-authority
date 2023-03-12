@@ -11,6 +11,10 @@ header {
   background-color: colours.$black;
   padding: 8px;
 
+  > h1 {
+    font-size: 1.6rem;
+  }
+
   > .options {
     display: flex;
     flex-wrap: wrap;
