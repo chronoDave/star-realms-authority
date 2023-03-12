@@ -5,11 +5,11 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "clean": "node scripts/clean.js",
     "build:ts": "node scripts/esbuild.js",
     "build:html": "node scripts/html.js",
-    "build:sass": "sass src/scss/index.scss dist/index.css --style=compressed --load-path=src/scss/core",
-    "start:sass": "sass src/scss/index.scss dist/index.css --watch --load-path=src/scss/core",
+    "build:sass": "sass src/scss/index.scss docs/index.css --style=compressed --load-path=src/scss/core",
+    "build": "npm run build:ts && npm run build:html && npm run build:sass",
+    "start:sass": "sass src/scss/index.scss docs/index.css --watch --load-path=src/scss/core",
     "start:html": "node scripts/html.js -w",
     "start:ts": "node scripts/esbuild.js -w"
   },

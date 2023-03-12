@@ -6,7 +6,7 @@ const config = {
   minify: true,
   sourcemap: true,
   target: 'es6',
-  outdir: 'dist',
+  outdir: 'docs',
   plugins: [{
     name: 'report',
     setup: build => {

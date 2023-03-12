@@ -7,11 +7,11 @@ const dirname = path.dirname(url.fileURLToPath(import.meta.url));
 const build = () => {
   fs.copyFileSync(
     path.resolve(dirname, '../src/index.html'),
-    path.resolve(dirname, '../dist/index.html')
+    path.resolve(dirname, '../docs/index.html')
   );
   fs.cpSync(
     path.resolve(dirname, '../src/assets'),
-    path.resolve(dirname, '../dist/assets'),
+    path.resolve(dirname, '../docs/assets'),
     { recursive: true }
   );
   console.log('[assets] copied assets');
