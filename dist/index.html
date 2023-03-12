@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-UK">
   <head>
     <meta http-equiv="Content-Type" content="text/html"/>
     <meta charset="utf-8"/>
@@ -13,91 +13,95 @@
     <script src="./index.js" defer></script>
   </head>
   <body>
-    <main>
+    <header>
       <div class="options">
         <label>
-          <span>Amount of players</span>
-          <input min="1" max="4" value="2" type="number" name="players">
+          <span>Players: </span>
+          <select name="players">
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
         </label>
         <label>
-          <span>Base authority</span>
-          <input min="1" type="number" value="50" name="authority">
+          <span>Authority: </span>
+          <input
+            min="1"
+            type="number"
+            value="50"
+            name="authority"
+          >
         </label>
-        <button type="button" class="reset">
-          Reset
-        </button>
       </div>
-      <div class="players">
-        <div class="player" id="player-1">
-          <p>Player 1</p>
-          <div class="score" id="player-1-score">
-            <img src="./assets/authority.png" alt="" aria-hidden="true" width="120" height="70" />
-            <span>50</span>
-          </div>
-          <div class="controls" aria-controls="player-1-score">
-            <button type="button" class="subtract" aria-title="Increase score">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14H4V10H20"/></svg>
-            </button>
-            <button type="button" class="add" aria-title="Decrease score">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14H14V20H10V14H4V10H10V4H14V10H20V14Z" /></svg>
-            </button>
-          </div>
+      <button type="button" class="reset">
+        Reset
+      </button>
+    </header>
+    <main>
+      <div class="player" id="player-1">
+        <p>Player 1</p>
+        <div class="score" id="player-1-score">
+          <img src="./assets/authority.png" alt="" aria-hidden="true" width="120" height="70" />
+          <span>50</span>
         </div>
-        <div class="player" id="player-2">
-          <p>Player 2</p>
-          <div class="score" id="player-2-score">
-            <img src="./assets/authority.png" alt="" aria-hidden="true" width="120" height="70" />
-            <span>50</span>
-          </div>
-          <div class="controls" aria-controls="player-2-score">
-            <button type="button" class="subtract" aria-title="Increase score">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14H4V10H20"/></svg>
-            </button>
-            <button type="button" class="add" aria-title="Decrease score">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14H14V20H10V14H4V10H10V4H14V10H20V14Z" /></svg>
-            </button>
-          </div>
+        <div class="controls" aria-controls="player-1-score">
+          <button type="button" class="subtract" aria-title="Increase score">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14H4V10H20"/></svg>
+          </button>
+          <button type="button" class="add" aria-title="Decrease score">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14H14V20H10V14H4V10H10V4H14V10H20V14Z" /></svg>
+          </button>
         </div>
-        <div class="player" id="player-3">
-          <p>Player 3</p>
-          <div class="score" id="player-3-score">
-            <img src="./assets/authority.png" alt="" aria-hidden="true" width="120" height="70" />
-            <span>50</span>
-          </div>
-          <div class="controls" aria-controls="player-3-score">
-            <button type="button" class="subtract" aria-title="Increase score">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14H4V10H20"/></svg>
-            </button>
-            <button type="button" class="add" aria-title="Decrease score">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14H14V20H10V14H4V10H10V4H14V10H20V14Z" /></svg>
-            </button>
-          </div>
+      </div>
+      <div class="player" id="player-2">
+        <p>Player 2</p>
+        <div class="score" id="player-2-score">
+          <img src="./assets/authority.png" alt="" aria-hidden="true" width="120" height="70" />
+          <span>50</span>
         </div>
-        <div class="player" id="player-4">
-          <p>Player 4</p>
-          <div class="score" id="player-4-score">
-            <img src="./assets/authority.png" alt="" aria-hidden="true" width="120" height="70" />
-            <span>50</span>
-          </div>
-          <div class="controls" aria-controls="player-4-score">
-            <button type="button" class="subtract" aria-title="Increase score">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14H4V10H20"/></svg>
-            </button>
-            <button type="button" class="add" aria-title="Decrease score">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14H14V20H10V14H4V10H10V4H14V10H20V14Z" /></svg>
-            </button>
-          </div>
+        <div class="controls" aria-controls="player-2-score">
+          <button type="button" class="subtract" aria-title="Increase score">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14H4V10H20"/></svg>
+          </button>
+          <button type="button" class="add" aria-title="Decrease score">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14H14V20H10V14H4V10H10V4H14V10H20V14Z" /></svg>
+          </button>
+        </div>
+      </div>
+      <div class="player" id="player-3">
+        <p>Player 3</p>
+        <div class="score" id="player-3-score">
+          <img src="./assets/authority.png" alt="" aria-hidden="true" width="120" height="70" />
+          <span>50</span>
+        </div>
+        <div class="controls" aria-controls="player-3-score">
+          <button type="button" class="subtract" aria-title="Increase score">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14H4V10H20"/></svg>
+          </button>
+          <button type="button" class="add" aria-title="Decrease score">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14H14V20H10V14H4V10H10V4H14V10H20V14Z" /></svg>
+          </button>
+        </div>
+      </div>
+      <div class="player" id="player-4">
+        <p>Player 4</p>
+        <div class="score" id="player-4-score">
+          <img src="./assets/authority.png" alt="" aria-hidden="true" width="120" height="70" />
+          <span>50</span>
+        </div>
+        <div class="controls" aria-controls="player-4-score">
+          <button type="button" class="subtract" aria-title="Increase score">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14H4V10H20"/></svg>
+          </button>
+          <button type="button" class="add" aria-title="Decrease score">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14H14V20H10V14H4V10H10V4H14V10H20V14Z" /></svg>
+          </button>
         </div>
       </div>
     </main>
     <footer>
-      <div class="author">
-        <p>Created by <a href="https://github.com/chronoDave">chronoDave</a>.</p>
-        <p>Found a bug? Report it on <a href="https://github.com/chronoDave/star-realms-authority/issues/new">GitHub</a>.</p>
-      </div>
-      <div class="copy">
-        <p>Game assets are trademarks and copyrights of <a href="https://www.wisewizardgames.com/trademarks/">Wise Wizard Games LLC</a>, creators of <a href="https://www.starrealms.com/">Star Realms &trade;</a></p>
-      </div>
+      <p>Created by <a href="https://github.com/chronoDave" target="_blank">chronoDave</a>. Found a bug? Report it on <a href="https://github.com/chronoDave/star-realms-authority/issues/new" target="_blank">GitHub</a>.</p>
+      <p>Game assets are trademarks and copyrights of <a href="https://www.wisewizardgames.com/trademarks/" target="_blank">Wise Wizard Games LLC</a>, creators of <a href="https://www.starrealms.com/" target="_blank">Star Realms</a>.</p>
     </footer>
   </body>
 </html>

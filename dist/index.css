@@ -1,56 +1,21 @@
-:where(:not(html, iframe, canvas, img, svg *, video *)) {
-  all: unset;
-  display: revert;
-}
-
-:where([contenteditable]:not([contenteditable=false])) {
-  -moz-user-modify: read-write;
-  -webkit-user-modify: read-write;
-  overflow-wrap: break-word;
-  line-break: after-white-space;
-  user-select: auto;
-}
-
-:where([draggable=true]) {
-  -webkit-user-drag: element;
-}
-
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: unset;
 }
 
-a, button {
+button {
+  border: none;
+  font: inherit;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  cursor: revert;
+  cursor: pointer;
 }
 
-ol, ul, menu {
-  list-style: none;
-}
-
-img {
-  max-width: 100%;
-}
-
-table {
-  border-collapse: collapse;
-}
-
-meter {
-  -webkit-appearance: revert;
-  appearance: revert;
-}
-
-input[type=search]::-webkit-search-cancel-button {
-  display: none;
-}
-
-::placeholder {
-  color: unset;
+input, select {
+  font: inherit;
 }
 
 @font-face {
@@ -69,19 +34,14 @@ body {
   background-size: cover;
 }
 body > main {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-}
-body > main > .players {
   display: grid;
   grid-template-columns: 1fr;
   flex-grow: 1;
   gap: 16px;
-  margin: 0 16px;
+  margin: 16px;
 }
 @media (min-aspect-ratio: 1/1) {
-  body > main > .players {
+  body > main {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -93,13 +53,15 @@ body > main > .players {
 body {
   font-family: "Open Sans", "Arial", sans-serif;
   color: rgb(255, 255, 255);
+  line-height: 1.6;
 }
 
-button {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
+a {
+  text-decoration: underline;
+  color: rgb(46, 163, 242);
+}
+a:visited {
+  color: rgb(0, 208, 132);
 }
 
 .player {
@@ -108,8 +70,9 @@ button {
   align-items: center;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
   backdrop-filter: blur(2px);
+  border-radius: 4px;
+  padding: 16px;
 }
 .player > p {
   font-size: 1.4rem;
@@ -161,6 +124,48 @@ button {
 }
 .player > .controls > button:hover > svg, .player > .controls > button:active > svg {
   fill: rgb(51, 51, 51);
+}
+
+footer {
+  text-align: center;
+  background-color: rgb(51, 51, 51);
+  padding: 4px 8px;
+  font-size: 0.875rem;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  background-color: rgb(51, 51, 51);
+  padding: 8px;
+}
+header > .options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+header > .options input[type=number] {
+  width: 5rem;
+  padding: 0;
+  padding-left: 4px;
+  margin: 0;
+}
+header > button {
+  border-radius: 4px;
+  background-color: rgb(51, 51, 51);
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  padding: 4px 16px;
+  border: 2px solid rgb(255, 255, 255);
+  transition: color 150ms ease-in-out, background-color 150ms ease-in-out, border-color 150ms ease-in-out;
+}
+header > button:hover, header > button:active {
+  color: rgb(51, 51, 51);
+  background-color: rgb(255, 255, 255);
+  border-color: rgb(51, 51, 51);
 }
 
 /*# sourceMappingURL=index.css.map */

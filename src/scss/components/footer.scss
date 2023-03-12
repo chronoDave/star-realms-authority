@@ -1,0 +1,9 @@
+@use 'colours';
+@use 'font';
+
+footer {
+  text-align: center;
+  background-color: colours.$black;
+  padding: 4px 8px;
+  font-size: font.pxToRem(14px);
+}

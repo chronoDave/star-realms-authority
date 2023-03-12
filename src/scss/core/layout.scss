@@ -8,20 +8,14 @@ body {
   background-size: cover;
 
   > main {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     flex-grow: 1;
+    gap: 16px;
+    margin: 16px;
 
-    > .players {
-      display: grid;
-      grid-template-columns: 1fr;
-      flex-grow: 1;
-      gap: 16px;
-      margin: 0 16px;
-
-      @media (min-aspect-ratio: 1/1) {
-        grid-template-columns: repeat(2, 1fr);
-      }
+    @media (min-aspect-ratio: 1/1) {
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 }

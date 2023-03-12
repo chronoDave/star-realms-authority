@@ -1,0 +1,42 @@
+@use 'colours';
+@use 'mixin';
+@use 'transition';
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  background-color: colours.$black;
+  padding: 8px;
+
+  > .options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    input[type="number"] {
+      width: 5rem;
+      padding: 0;
+      padding-left: 4px;
+      margin: 0;
+    }
+  }
+
+  > button {
+    border-radius: 4px;
+    background-color: colours.$black;
+    color: colours.$white;
+    font-weight: 700;
+    padding: 4px 16px;
+    border: 2px solid colours.$white;
+    transition: color transition.$fast, background-color transition.$fast, border-color transition.$fast;
+
+    @include mixin.hoverActive {
+      color: colours.$black;
+      background-color: colours.$white;
+      border-color: colours.$black;
+    }
+  }
+}

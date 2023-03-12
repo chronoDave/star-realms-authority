@@ -4,4 +4,14 @@
 body {
   font-family: font.$family;
   color: colours.$white;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: underline;
+  color: colours.$link;
+
+  &:visited {
+    color: colours.$link-visited;
+  }
 }

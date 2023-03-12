@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 $family: 'Open Sans', 'Arial', sans-serif;
 
 @font-face {
@@ -5,4 +7,8 @@ $family: 'Open Sans', 'Arial', sans-serif;
   font-weight: 400;
   font-display: swap;
   src: local('OpenSans-Regular')
+}
+
+@function pxToRem($px) {
+  @return math.div($px, 16px) * 1rem;
 }

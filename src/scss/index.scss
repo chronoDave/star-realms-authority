@@ -1,9 +1,9 @@
 @use './core/reset.scss';
-@use './core/colours.scss';
 @use './core/font.scss';
 @use './core/layout.scss';
 @use './core/global.scss';
 
 @use './components/typography.scss';
-@use './components/button.scss';
 @use './components/player.scss';
+@use './components/footer.scss';
+@use './components/header.scss';
