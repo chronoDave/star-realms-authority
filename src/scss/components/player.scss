@@ -52,22 +52,15 @@
       font-size: 2rem;
       padding: 8px;
       border-radius: 4px;
+      color: colours.$white;
       background-color: colours.$black;
       width: 32px;
       height: 32px;
-      transition: background-color transition.$fast;
-
-      > svg {
-        fill: colours.$white;
-        transition: fill transition.$fast;
-      }
+      transition: background-color transition.$fast, color transition.$fast;
 
       @include mixin.hoverActive {
         background-color: colours.$white;
-
-        > svg {
-          fill: colours.$black;
-        }
+        color: colours.$black;
       }
     }
   }
