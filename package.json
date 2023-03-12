@@ -1,0 +1,36 @@
+{
+  "name": "star-realms-authority",
+  "version": "1.0.0",
+  "description": "Star Realms Authority tracker",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "clean": "node scripts/clean.js",
+    "build:ts": "node scripts/esbuild.js",
+    "build:html": "node scripts/html.js",
+    "build:sass": "sass src/scss/index.scss dist/index.css --style=compressed --load-path=src/scss/core",
+    "start:sass": "sass src/scss/index.scss dist/index.css --watch --load-path=src/scss/core",
+    "start:html": "node scripts/html.js -w",
+    "start:ts": "node scripts/esbuild.js -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chronoDave/star-realms-authority.git"
+  },
+  "author": "Chronocide",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/chronoDave/star-realms-authority/issues"
+  },
+  "homepage": "https://github.com/chronoDave/star-realms-authority#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.54.1",
+    "@typescript-eslint/parser": "^5.54.1",
+    "chokidar": "^3.5.3",
+    "esbuild": "^0.17.11",
+    "eslint": "^8.36.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "sass": "^1.59.2",
+    "typescript": "^4.9.5"
+  }
+}

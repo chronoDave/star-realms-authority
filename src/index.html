@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html"/>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Star Realms Authority Tracker</title>
+    <meta name="description" content="An unofficial authority tracker for the card game Star Realms by Wise Wizard Games LLC"/>
+
+    <link href="./index.css" type="text/css" rel="stylesheet">
+
+    <script src="./index.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <div class="options">
+        <label>
+          <span>Amount of players</span>
+          <input min="1" max="4" value="2" type="number" name="players">
+        </label>
+        <label>
+          <span>Base authority</span>
+          <input min="1" type="number" value="50" name="authority">
+        </label>
+        <button type="button" class="reset">
+          Reset
+        </button>
+      </div>
+      <div class="players">
+        <div class="player" id="player-1">
+          Player 1
+          <div class="score" id="player-1-score">
+            50
+          </div>
+          <div class="controls" aria-controls="player-1-score">
+            <button type="button" class="subtract">-</button>
+            <button type="button" class="add">+</button>
+          </div>
+        </div>
+        <div class="player" id="player-2">
+          Player 2
+          <div class="score" id="player-2-score">
+            50
+          </div>
+          <div class="controls" aria-controls="player-2-score">
+            <button type="button" class="subtract">-</button>
+            <button type="button" class="add">+</button>
+          </div>
+        </div>
+        <div class="player" id="player-3">
+          Player 3
+          <div class="score" id="player-3-score">
+            50
+          </div>
+          <div class="controls" aria-controls="player-3-score">
+            <button type="button" class="subtract">-</button>
+            <button type="button" class="add">+</button>
+          </div>
+        </div>
+        <div class="player" id="player-4">
+          Player 4
+          <div class="score" id="player-4-score">
+            50
+          </div>
+          <div class="controls" aria-controls="player-4-score">
+            <button type="button" class="subtract">-</button>
+            <button type="button" class="add">+</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>
+        Created by <a href="https://github.com/chronoDave">chronoDave</a>.
+      </p>
+      <p>Found a bug? Report it on <a href="https://github.com/chronoDave/star-realms-authority/issues/new">GitHub</a>.</p>
+    </footer>
+  </body>
+</html>

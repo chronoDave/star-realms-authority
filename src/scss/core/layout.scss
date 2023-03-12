@@ -1,0 +1,17 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  > main {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    > .players {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      flex-grow: 1;
+    }
+  }
+}

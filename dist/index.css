@@ -1,0 +1,93 @@
+:where(:not(html, iframe, canvas, img, svg *, video *)) {
+  all: unset;
+  display: revert;
+}
+
+:where([contenteditable]:not([contenteditable=false])) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  line-break: after-white-space;
+  user-select: auto;
+}
+
+:where([draggable=true]) {
+  -webkit-user-drag: element;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a, button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: revert;
+}
+
+ol, ul, menu {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+meter {
+  -webkit-appearance: revert;
+  appearance: revert;
+}
+
+input[type=search]::-webkit-search-cancel-button {
+  display: none;
+}
+
+::placeholder {
+  color: unset;
+}
+
+@font-face {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: 400;
+  font-display: swap;
+  src: local("OpenSans-Regular");
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+body > main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+body > main > .players {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  flex-grow: 1;
+}
+
+.hidden {
+  display: none;
+}
+
+body {
+  font-family: "Open Sans", "Arial", sans-serif;
+}
+
+button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=index.css.map */

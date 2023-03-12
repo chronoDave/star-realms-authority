@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "lib": [
+      "ESNext",
+      "DOM"
+    ],
+
+    "strict": true,
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "forceConsistentCasingInFileNames": true,
+
+    "declaration": false,
+    "outDir": "dist"
+  },
+  "include": [
+    "scripts",
+    "src",
+    ".eslintrc.cjs"
+  ]
+}
