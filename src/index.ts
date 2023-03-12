@@ -5,7 +5,7 @@ const updatePlayerCount = (n: number) => Array.from(document.querySelectorAll('.
     player.setAttribute('aria-hidden', `${i >= n}`);
   });
 
-const updateBaseAuthority = (n: number) => Array.from(document.querySelectorAll('.players > .player > .score'))
+const updateBaseAuthority = (n: number) => Array.from(document.querySelectorAll('.players > .player > .score > span'))
   .forEach(score => {
     score.innerHTML = `${n}`;
   });
@@ -25,7 +25,7 @@ Array.from(document.querySelectorAll('.players > .player'))
   .forEach(player => {
     const buttonAdd = player.querySelector<HTMLButtonElement>('button.add');
     const buttonSubtract = player.querySelector<HTMLButtonElement>('button.subtract');
-    const score = player.querySelector<HTMLDivElement>('.score');
+    const score = player.querySelector<HTMLDivElement>('.score > span');
 
     buttonAdd?.addEventListener('click', () => {
       if (score) score.innerText = `${parseInt(score.innerText, 10) + 1}`;
@@ -35,3 +35,5 @@ Array.from(document.querySelectorAll('.players > .player'))
       if (score) score.innerText = `${parseInt(score.innerText, 10) - 1}`;
     });
   });
+
+update();

@@ -9,11 +9,16 @@ const build = () => {
     path.resolve(dirname, '../src/index.html'),
     path.resolve(dirname, '../dist/index.html')
   );
-  console.log('[html] copied index.html');
+  fs.cpSync(
+    path.resolve(dirname, '../src/assets'),
+    path.resolve(dirname, '../dist/assets'),
+    { recursive: true }
+  );
+  console.log('[assets] copied assets');
 };
 
 if (process.argv.slice(2)[0] === '-w') {
-  console.log('[html] watching for changes');
+  console.log('[assets] watching for changes');
   chokidar.watch('src/index.html').on('change', build);
   build();
 } else {

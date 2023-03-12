@@ -2,6 +2,10 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background: url('./assets/bg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
   > main {
     display: flex;
@@ -10,8 +14,14 @@ body {
 
     > .players {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: 1fr;
       flex-grow: 1;
+      gap: 16px;
+      margin: 0 16px;
+
+      @media (min-aspect-ratio: 1/1) {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
   }
 }

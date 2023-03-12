@@ -63,6 +63,10 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background: url("./assets/bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 body > main {
   display: flex;
@@ -71,16 +75,24 @@ body > main {
 }
 body > main > .players {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   flex-grow: 1;
+  gap: 16px;
+  margin: 0 16px;
+}
+@media (min-aspect-ratio: 1/1) {
+  body > main > .players {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 body {
   font-family: "Open Sans", "Arial", sans-serif;
+  color: rgb(255, 255, 255);
 }
 
 button {
@@ -88,6 +100,67 @@ button {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+}
+
+.player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  backdrop-filter: blur(2px);
+}
+.player > p {
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding: 6px 24px;
+  border-radius: 4px;
+  background-color: rgb(51, 51, 51);
+}
+.player > .score {
+  position: relative;
+  width: 120px;
+  height: 70px;
+  margin: 24px 0;
+}
+.player > .score > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.player > .score > span {
+  position: absolute;
+  top: 28px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 700;
+  font-size: 2rem;
+  color: #000;
+}
+.player > .controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.player > .controls > button {
+  font-size: 2rem;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: rgb(51, 51, 51);
+  width: 32px;
+  height: 32px;
+  transition: background-color 150ms ease-in-out;
+}
+.player > .controls > button > svg {
+  fill: rgb(255, 255, 255);
+  transition: fill 150ms ease-in-out;
+}
+.player > .controls > button:hover, .player > .controls > button:active {
+  background-color: rgb(255, 255, 255);
+}
+.player > .controls > button:hover > svg, .player > .controls > button:active > svg {
+  fill: rgb(51, 51, 51);
 }
 
 /*# sourceMappingURL=index.css.map */
