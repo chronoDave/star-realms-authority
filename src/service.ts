@@ -8,6 +8,8 @@ self.addEventListener('install', e => {
         '/index.js',
         '/assets/authority.png',
         '/assets/bg.png',
+        '/assets/life-up.wav',
+        '/assets/life-down.wav',
       ]);
     })
   );
