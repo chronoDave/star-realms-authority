@@ -1,6 +1,7 @@
 @use 'colours';
 @use 'transition';
 @use 'mixin';
+@use 'breakpoints';
 
 .player {
   display: flex;
@@ -48,15 +49,24 @@
     align-items: center;
     gap: 16px;
 
+    @media (min-width: breakpoints.$tablet) {
+      gap: 24px;
+    }
+
     > button {
       font-size: 2rem;
       padding: 8px;
-      border-radius: 4px;
       color: colours.$white;
       background-color: colours.$black;
       width: 32px;
       height: 32px;
       transition: background-color transition.$fast, color transition.$fast;
+      border-radius: 50%;
+
+      @media (min-width: breakpoints.$tablet) {
+        width: 48px;
+        height: 48px;
+      }
 
       @include mixin.hoverActive {
         background-color: colours.$white;

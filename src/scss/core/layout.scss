@@ -1,7 +1,7 @@
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100dvh;
+  height: 100dvh;
   background: url('./assets/bg.png');
   background-position: center;
   background-repeat: no-repeat;
@@ -13,6 +13,7 @@ body {
     flex-grow: 1;
     gap: 16px;
     margin: 16px;
+    overflow: auto;
 
     @media (min-aspect-ratio: 1/1) {
       grid-template-columns: repeat(2, 1fr);
