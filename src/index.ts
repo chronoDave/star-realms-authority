@@ -43,8 +43,6 @@ const debounce = <T extends (...args: any[]) => any>(cb: T, n: number) => {
   });
 };
 
-document.querySelector<HTMLButtonElement>('header > button.reset')?.addEventListener('click', update);
-
 /** Players */
 const init = async () => {
   const speak = (text: string) => speechSynthesis.speak(new SpeechSynthesisUtterance(text));
@@ -82,7 +80,22 @@ const init = async () => {
         if (score?.innerText) debouncedLifeDown(score.innerText);
       });
     });
-}
+};
+
+/** Reset */
+document.querySelector('button.reset')?.addEventListener('click', update);
+
+/** Mirror */
+document.querySelector('button.mirror')?.addEventListener('click', () => {
+  document.querySelector('main')?.classList.toggle('mirror');
+});
+
+/** Show / Hide */
+document.querySelector('button.focus')?.addEventListener('click', event => {
+  document.querySelector('footer')?.classList.toggle('hidden');
+  (event.currentTarget as HTMLButtonElement).classList.toggle('show');
+  document.querySelector('h1')?.classList.toggle('hidden');
+});
 
 init();
 update();

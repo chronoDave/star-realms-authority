@@ -28,19 +28,45 @@ header {
     }
   }
 
-  > button {
-    border-radius: 4px;
-    background-color: colours.$black;
-    color: colours.$white;
-    font-weight: 700;
-    padding: 4px 16px;
-    border: 2px solid colours.$white;
-    transition: color transition.$fast, background-color transition.$fast, border-color transition.$fast;
+  > .toolbar {
+    display: flex;
+    gap: 8px;
 
-    @include mixin.hoverActive {
-      color: colours.$black;
-      background-color: colours.$white;
-      border-color: colours.$black;
+    button {
+      border-radius: 4px;
+      background-color: colours.$black;
+      color: colours.$white;
+      fill: colours.$white;
+      font-weight: 700;
+      padding: 4px 12px;
+      border: 2px solid colours.$white;
+      transition: color transition.$fast, background-color transition.$fast, border-color transition.$fast;
+
+      @include mixin.hoverActive {
+        color: colours.$black;
+        fill: colours.$black;
+        background-color: colours.$white;
+        border-color: colours.$black;
+      }
+
+      > svg {
+        width: 24px;
+        height: 24px;
+      }
+
+      &.focus {
+        &.show {
+          svg.show {
+            display: none;
+          }
+        }
+
+        &:not(.show) {
+          svg.hide {
+            display: none;
+          }
+        }
+      }
     }
   }
 }

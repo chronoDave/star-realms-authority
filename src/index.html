@@ -16,11 +16,12 @@
     <meta name="theme-color" content="#333333">
     <meta property="og:title" content="Star Realms Authority Tracker">
     <meta property="og:description" content="An unofficial Star Realms authority tracker">
-    <meta property="og:image" content="./assets/og-image.png">
+    <meta property="og:image" content="https://chronodave.github.io/star-realms-authority/assets/og-image.png">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://chronodave.github.io/star-realms-authority/">
 
-    <link href="./index.css" type="text/css" rel="stylesheet">
-    <script src="./index.js" defer></script>
+    <link href="./index.css?v1.1" type="text/css" rel="stylesheet">
+    <script src="./index.js?v1.1" defer></script>
   </head>
   <body>
     <header>
@@ -44,9 +45,18 @@
           >
         </label>
       </div>
-      <button type="button" class="reset">
-        Reset
-      </button>
+      <div class="toolbar">
+        <button type="button" class="focus show" aria-label="Toggle focus mode">
+          <svg class="show" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17M12,4.5C7,4.5 2.73,7.61 1,12C2.73,16.39 7,19.5 12,19.5C17,19.5 21.27,16.39 23,12C21.27,7.61 17,4.5 12,4.5Z" /></svg>
+          <svg class="hide" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.83,9L15,12.16C15,12.11 15,12.05 15,12A3,3 0 0,0 12,9C11.94,9 11.89,9 11.83,9M7.53,9.8L9.08,11.35C9.03,11.56 9,11.77 9,12A3,3 0 0,0 12,15C12.22,15 12.44,14.97 12.65,14.92L14.2,16.47C13.53,16.8 12.79,17 12,17A5,5 0 0,1 7,12C7,11.21 7.2,10.47 7.53,9.8M2,4.27L4.28,6.55L4.73,7C3.08,8.3 1.78,10 1,12C2.73,16.39 7,19.5 12,19.5C13.55,19.5 15.03,19.2 16.38,18.66L16.81,19.08L19.73,22L21,20.73L3.27,3M12,7A5,5 0 0,1 17,12C17,12.64 16.87,13.26 16.64,13.82L19.57,16.75C21.07,15.5 22.27,13.86 23,12C21.27,7.61 17,4.5 12,4.5C10.6,4.5 9.26,4.75 8,5.2L10.17,7.35C10.74,7.13 11.35,7 12,7Z" /></svg>
+        </button>
+        <button type="button" class="mirror" aria-label="Mirror players">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10,4V1L14,5L10,9V6A6,6 0 0,0 4,12L4.08,13H2.06L2,12A8,8 0 0,1 10,4M17,2H20A2,2 0 0,1 22,4V20A2,2 0 0,1 20,22H17A2,2 0 0,1 15,20V4A2,2 0 0,1 17,2M4,15H13V22H4A2,2 0 0,1 2,20V17A2,2 0 0,1 4,15Z" /></svg>
+        </button>
+        <button type="button" class="reset">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13,3A9,9 0 0,0 4,12H1L4.89,15.89L4.96,16.03L9,12H6A7,7 0 0,1 13,5A7,7 0 0,1 20,12A7,7 0 0,1 13,19C11.07,19 9.32,18.21 8.06,16.94L6.64,18.36C8.27,20 10.5,21 13,21A9,9 0 0,0 22,12A9,9 0 0,0 13,3Z" /></svg>
+        </button>
+      </div>
     </header>
     <main>
       <div class="player" id="player-1">
