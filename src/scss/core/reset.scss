@@ -12,6 +12,7 @@ button {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  touch-action: manipulation;
 }
 
 input, select {
