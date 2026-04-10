@@ -2,8 +2,12 @@
   "name": "star-realms-authority",
   "version": "1.1.0",
   "description": "Star Realms Authority tracker",
+  "private": true,
   "type": "module",
-  "main": "index.js",
+  "engines": {
+    "node": ">=24.11.1",
+    "npm": ">=11.6.0"
+  },
   "scripts": {
     "build:ts": "node scripts/esbuild.js",
     "build:html": "node scripts/html.js",
@@ -22,15 +26,12 @@
   "bugs": {
     "url": "https://github.com/chronoDave/star-realms-authority/issues"
   },
-  "homepage": "https://github.com/chronoDave/star-realms-authority#readme",
+  "homepage": "https://chronodave.github.io/star-realms-authority/",
+  "optionalDependencies": {
+    "@chronocide/eslint-config": "^0.7.11"
+  },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.54.1",
-    "@typescript-eslint/parser": "^5.54.1",
-    "chokidar": "^3.5.3",
-    "esbuild": "^0.25.0",
-    "eslint": "^8.36.0",
-    "eslint-config-airbnb-typescript": "^17.0.0",
-    "sass": "^1.59.2",
-    "typescript": "^4.9.5"
+    "esbuild": "^0.28.0",
+    "typescript": "^6.0.2"
   }
 }
