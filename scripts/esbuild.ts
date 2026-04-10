@@ -11,12 +11,14 @@ const version = await fsp.readFile('package.json', 'utf-8')
 
 const config: BuildOptions = {
   entryPoints: [
-    'src/index.html'
+    'src/index.html',
+    'src/index.ts'
   ],
   bundle: true,
   minify: !isWatch,
   sourcemap: isWatch,
   target: 'es6',
+  external: ['./assets/bg.png'],
   loader: {
     '.html': 'text'
   },

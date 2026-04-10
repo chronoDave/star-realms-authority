@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Star Realms Authority Tracker</title>
     <meta name="description" content="An unofficial authority tracker for the card game Star Realms by Wise Wizard Games LLC"/>
+    <meta name="author" content="Chronocide">
+    <link rel="author" href="https://chronocide.neocities.org/">
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
@@ -33,11 +35,11 @@
         </select>
         <label for="authority">Authority</label>
         <input type="text" id="authority" value="50" inputmode="numeric" pattern="[0-9]*">
-        <button type="button">
+        <button type="button" data-action="orientation">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon"><path d="M10,4V1L14,5L10,9V6A6,6 0 0,0 4,12L4.08,13H2.06L2,12A8,8 0 0,1 10,4M17,2H20A2,2 0 0,1 22,4V20A2,2 0 0,1 20,22H17A2,2 0 0,1 15,20V4A2,2 0 0,1 17,2M4,15H13V22H4A2,2 0 0,1 2,20V17A2,2 0 0,1 4,15Z" /></svg>
           <span class="sr-only">Change orientation</span>
         </button>
-        <button type="button">
+        <button type="button" data-action="reset">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon"><path d="M13,3A9,9 0 0,0 4,12H1L4.89,15.89L4.96,16.03L9,12H6A7,7 0 0,1 13,5A7,7 0 0,1 20,12A7,7 0 0,1 13,19C11.07,19 9.32,18.21 8.06,16.94L6.64,18.36C8.27,20 10.5,21 13,21A9,9 0 0,0 22,12A9,9 0 0,0 13,3Z" /></svg>
           <span class="sr-only">Reset</span>
         </button>

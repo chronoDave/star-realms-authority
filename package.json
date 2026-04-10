@@ -9,13 +9,8 @@
     "npm": ">=11.6.0"
   },
   "scripts": {
-    "build:ts": "node scripts/esbuild.js",
-    "build:html": "node scripts/html.js",
-    "build:sass": "sass src/scss/index.scss docs/index.css --style=compressed --load-path=src/scss/core",
-    "build": "npm run build:ts && npm run build:html && npm run build:sass",
-    "start:sass": "sass src/scss/index.scss docs/index.css --watch --load-path=src/scss/core",
-    "start:html": "node scripts/html.js -w",
-    "start:ts": "node scripts/esbuild.js -w"
+    "build": "node scripts/esbuild.ts",
+    "start": "node scripts/esbuild.ts -w"
   },
   "repository": {
     "type": "git",
@@ -31,7 +26,11 @@
     "@chronocide/eslint-config": "^0.7.11"
   },
   "devDependencies": {
+    "@types/node": "^25.6.0",
     "esbuild": "^0.28.0",
     "typescript": "^6.0.2"
+  },
+  "dependencies": {
+    "@chronocide/hyper": "^1.3.1"
   }
 }

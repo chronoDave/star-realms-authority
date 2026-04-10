@@ -33,13 +33,10 @@ main {
 }
 
 input, select, button {
+  font-family: monospace;
+  font-size: 1rem;
   min-width: 24px;
   min-height: 24px;
-  font-size: inherit;
-}
-
-input, select {
-  font-family: monospace;
 }
 
 a {
