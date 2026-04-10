@@ -1,23 +1,22 @@
 {
   "compilerOptions": {
-    "target": "es6",
-    "lib": [
-      "ESNext",
-      "DOM"
-    ],
+    "target": "ESNext",
+    "lib": ["ESNext", "DOM"],
+    "module": "Node16",
+    "moduleResolution": "node16",
+    "allowImportingTsExtensions": true,
 
     "strict": true,
     "noImplicitAny": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
 
-    "declaration": false,
-    "outDir": "dist"
+    "noEmit": true,
+    "outDir": "build"
   },
   "include": [
-    "scripts",
     "src",
-    ".eslintrc.cjs"
-  ]
+    "scripts",
+    "eslint.config.js"
+  ],
 }
