@@ -1,0 +1,108 @@
+:root {
+  --black: rgb(51, 51, 51);
+  --white: rgb(255, 255, 255);
+  --blue: rgb(46, 163, 242);
+  --green: rgb(0, 208, 132);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: unset;
+}
+
+html {
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background: url('./assets/bg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100dvh;
+}
+
+main {
+  flex-grow: 1;
+}
+
+input, select, button {
+  min-width: 24px;
+  min-height: 24px;
+  font-size: inherit;
+}
+
+input, select {
+  font-family: monospace;
+}
+
+a {
+  color: var(--blue);
+}
+
+a:visited {
+  color: var(--green);
+}
+
+.sr-only {
+  width: 1px !important;
+  height: 1px !important;
+  position: absolute !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+svg.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+button:has(.icon) {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  background-color: var(--black);
+  color: var(--white);
+  padding: 0.5rem;
+}
+
+h1 {
+  font-size: 1rem;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+footer {
+  text-align: center;
+  gap: 0.25rem;
+  background-color: var(--black);
+  color: var(--white);
+  padding: 0.5rem;
+  font-size: 0.875rem;
+}
+
+#authority {
+  box-sizing: content-box;
+  width: 3ch;
+  padding: 0 0.5ch;
+}
